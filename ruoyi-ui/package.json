@@ -1,11 +1,12 @@
 {
   "name": "ruoyi",
   "version": "3.8.5",
-  "description": "若依管理系统",
+  "description": "人事管理系统",
   "author": "若依",
   "license": "MIT",
   "scripts": {
-    "dev": "vue-cli-service serve",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "node --openssl-legacy-provider scripts/build.js",
     "build:prod": "vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
     "preview": "node build/index.js --preview",
